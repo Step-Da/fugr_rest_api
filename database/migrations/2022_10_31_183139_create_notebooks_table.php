@@ -22,7 +22,7 @@ class CreateNotebooksTable extends Migration
             $table->string('phone', 12);
             $table->string('email');
             $table->date('birth_date')->nullable();
-            $table->string('photo')->nullable()->default('Нет фото');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

@@ -38,7 +38,9 @@
                 <td> {{ $note->email }} </td>
                 <td> {{ $note->birth_date }} </td>
                 <td>
-                    <img width="75" src="{{ asset('storage') .'/images/'.$note->photo}}">
+                    @if($note->photo)
+                        <img width="75" src="{{ asset('images/' . $note->photo) }}" alt="{{ $note->photo }}">
+                    @endif
                 </td>
                 <td>
             </tr>
